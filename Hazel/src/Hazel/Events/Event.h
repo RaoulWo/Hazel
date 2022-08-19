@@ -2,8 +2,7 @@
 
 #include "Hazel/Core.h"
 
-#include <string>
-#include <functional>
+#include <functional> // Needs to be included even though it is part of hzpch.h
 
 namespace Hazel {
 
