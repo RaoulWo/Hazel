@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Event.h"
+#include "Hazel/Events/Event.h"
 
 namespace Hazel {
 
@@ -81,6 +81,7 @@ namespace Hazel {
 
 	class HAZEL_API MouseButtonReleasedEvent : public MouseButtonEvent
 	{
+	public:
 		MouseButtonReleasedEvent(int button)
 			: MouseButtonEvent(button) {}
 

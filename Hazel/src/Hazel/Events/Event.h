@@ -3,6 +3,7 @@
 #include "Hazel/Core.h"
 
 #include <functional> // Needs to be included even though it is part of hzpch.h
+#include <sstream>
 
 namespace Hazel {
 
