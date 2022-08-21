@@ -1,6 +1,5 @@
 workspace "Hazel"
     architecture "x64"
-
     startproject "Sandbox"
 
     configurations
@@ -18,9 +17,12 @@ IncludeDir["glfw"] = "Hazel/vendor/glfw/include"
 IncludeDir["glad"] = "Hazel/vendor/glad/include"
 IncludeDir["imgui"] = "Hazel/vendor/imgui"
 
-include "Hazel/vendor/glfw"
-include "Hazel/vendor/glad"
-include "Hazel/vendor/imgui"
+group "Dependencies"
+    include "Hazel/vendor/glfw"
+    include "Hazel/vendor/glad"
+    include "Hazel/vendor/imgui"
+
+group ""
 
 project "Hazel"
     location "Hazel"
@@ -70,7 +72,7 @@ project "Hazel"
 
         postbuildcommands
         {
-            ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+            ("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
         }
 
     filter "configurations:Debug"
